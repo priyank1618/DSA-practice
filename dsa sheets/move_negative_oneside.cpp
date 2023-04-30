@@ -12,7 +12,7 @@ void sorting(vector<int> &num)
     int start=0,end=num.size()-1;
 
 
-// //move left side negative element
+// //move left side negative element without preserving order
 //     while(start <= end)
 //     {
 //       if(num[start] < 0) start++;
@@ -22,7 +22,7 @@ void sorting(vector<int> &num)
 //       }
 //     }
 
-// //move ri8 side negative element
+// //move ri8 side negative element without preserving order
 //     while(start <= end)
 //     {
 //       if(num[start] > 0) start++;
@@ -62,11 +62,11 @@ void sorting(vector<int> &num)
         int temp = num[i];
         
 
-        // temp negtive na hoy to sidha agad vadho
+        // temp positive na hoy to sidha agad vadho
        if(temp > 0)
        {
          int j = i-1;
-        while (j >= 0 and num[j] <= 0) // jo index available hoy and element positive hoy to badlo
+        while (j >= 0 and num[j] <= 0) // jo index available hoy and element negative hoy to badlo
         {
             num[j+1] = num[j];
             j--; // have kadach ane agad ni index par negative madyo to bas agad j+1 ma temp nakhi do

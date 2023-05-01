@@ -18,6 +18,13 @@ using namespace std;
     //    2 3
     //    3
 
+
+// two ways to do it 
+
+// 1st i= 0 - n        2nd i= 0 - n
+//     j= 0 - n-i          j= i - n
+//     k= i - i+j          k= i - j
+
 int main()
 {
     vector<int> d{0,1,2,3};
@@ -27,9 +34,9 @@ int main()
 
     for (int i = 0; i < d.size(); i++)
     {
-        for (int j = 0; j < d.size()-i; j++)
+        for (int j = i; j < d.size(); j++)
         {
-            for (int k = i; k <= i+j; k++)
+            for (int k = i; k <= j; k++)
             {
                 cout << d[k] << " ";
             }

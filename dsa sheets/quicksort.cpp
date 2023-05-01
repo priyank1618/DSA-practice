@@ -28,7 +28,7 @@ int partition(int arr[],int s,int e)
 
     while(i < pivotindex and j > pivotindex)
     {
-        while(arr[i]<pivot) i++;
+        while(arr[i]<=pivot) i++;  // dhyan se idhar less than opr equal to ata he................................
         while(arr[j]>pivot) j--;
 
         if(i < pivotindex and j > pivotindex)
@@ -56,8 +56,8 @@ void quicksort(int arr[],int s,int e)
 
 int main(){
 
-    int arr[6] ={21,11,43,34,22,4};
-    int n=6;
+    int arr[64] ={28,153,174,499, 281 ,117 ,471 ,367 ,281, 460 ,501 ,574, 277 ,156 ,926, 800 ,694 ,502, 445 ,723 ,700 ,519 ,752, 629 ,269, 76 ,357, 502 ,413 ,102 ,566 ,794 ,255 ,92, 293 ,888, 209 ,765 ,607 ,491 ,577, 460 ,417 ,854, 616, 343, 6 ,311 ,845 ,804 ,34 ,898 ,323, 138, 527 ,593 ,566, 884 ,447, 331 ,338 ,14 ,125 ,945};
+    int n=64;
 
     //mergesort the array
     quicksort(arr,0,n-1);

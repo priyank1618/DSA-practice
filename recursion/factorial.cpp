@@ -1,12 +1,14 @@
 #include<iostream>
 using namespace std;
 
-//debug for 4
+//if you remove base case then give seg fault bcz stack overflow thai jase
 
-//for 4 = 4*func(3)= 4*6 = 24  send to final ans 
-//for 3 = 3*func(2)= 3*2 = 6 send upward
-//for 2 = 2*func(1) =2*1= 2 send upward
-//for 1 = 1 * func(0) = 1*1= 1 send upward
+//debug for 4 call stack
+
+//for 4 = 4*func(3)    |   = 4*6 = 24  send to final ans 
+//for 3 = 3*func(2)    |   = 3*2 = 6 send upward
+//for 2 = 2*func(1)    |   =2*1= 2 send upward
+//for 1 = 1 * func(0)  |   = 1*1= 1 send upward
 //for 0 = reach base case and send 1 to upward
 
 

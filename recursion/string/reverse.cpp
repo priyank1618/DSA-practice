@@ -24,23 +24,31 @@ void reverse2(string& s,int i,int j)
 
     reverse2(s,i+1,j-1);
 }
+void reverse3(string& s1,int i)
+{
+    //base case 
+    if(i>s1.length()-i-1) return;
+
+    swap(s1[i],s1[s1.length()-i-1]);
+
+    reverse3(s1,i+1);
+}
 
 int main()
 {
     string s="raman";
+    string s1="chaman";
 
     int n = s.length();
 
     reverse1(s,n);
-
-
     cout << endl;
 
     reverse2(s,0,s.length()-1);
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << s[i] << " ";
-    }
+   cout << s <<" "<< endl;
+    reverse3(s1,0);
+
+    cout << s1 << " " <<endl;
     
 }

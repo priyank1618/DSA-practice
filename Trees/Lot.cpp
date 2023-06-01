@@ -73,19 +73,23 @@ void prot(Node* root)
    //prot --> node is pre --> NLR
      cout << root-> data << " ";prot(root->left);prot(root->right);
 }
-void iot(Node* root)
+void poot(Node* root)
 {
    //base case 
    if(root == NULL) return;
 
-   //iot --> node is in --> LNR
-   iot(root->left);cout << root-> data << " ";iot(root->right);
+   //iot --> node is in --> LRN
+   poot(root->left);poot(root->right);cout << root-> data << " ";
 }
 int main()
 {
    Node* root=NULL;
    root=buildtree(root);
    lot(root);
+
+   cout << "inorder traversal is   " ; iot(root); cout << endl;
+   cout << "preorder traversal is   " ; prot(root);cout<< endl;
+   cout << "postorder traversal is   " ; poot(root);
 }
 
 //1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1

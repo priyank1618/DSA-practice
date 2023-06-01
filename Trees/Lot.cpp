@@ -57,6 +57,30 @@ void lot(Node* root)
 
 }
 
+void iot(Node* root)
+{
+   //base case 
+   if(root == NULL) return;
+
+   //iot --> node is in --> LNR
+   iot(root->left);cout << root-> data << " ";iot(root->right);
+}
+void prot(Node* root)
+{
+   //base case 
+   if(root == NULL) return;
+
+   //prot --> node is pre --> NLR
+     cout << root-> data << " ";prot(root->left);prot(root->right);
+}
+void iot(Node* root)
+{
+   //base case 
+   if(root == NULL) return;
+
+   //iot --> node is in --> LNR
+   iot(root->left);cout << root-> data << " ";iot(root->right);
+}
 int main()
 {
    Node* root=NULL;

@@ -7,6 +7,8 @@ autobiography num je 6 e avo 6 k
 
 //jo avu hoy to number ma distinct value return karo and na hoy to zero return karo
 
+// constrain  10 thi vadhu length nahi hoy 
+
 
 //examples
 
@@ -26,3 +28,43 @@ autobiography num je 6 e avo 6 k
 #include<functional>
 #include<unordered_map>
 using namespace std;
+
+int help(string s)
+{
+    int n=s.size();
+    int cnt=0;
+
+    int arr[10]={0};
+
+
+    //note all the frequency in arr
+    for(int i=0;i<n;i++)
+    {
+        arr[s[i]-'0']++;
+    }
+
+    //check for autobio
+    for(int i=0;i<n;i++) if(arr[i] != (s[i]-'0')) return 0;
+
+    //not return dis val
+    for(int i=0;i<10;i++)
+    {
+        if(arr[i]>0) cnt++;
+    }
+    
+    return cnt;
+}
+
+
+
+int main()
+{
+    string s;
+
+    cin >> s;
+
+    int ans=help(s);
+
+  cout << help(s);
+
+}

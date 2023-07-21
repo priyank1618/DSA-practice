@@ -1,3 +1,15 @@
+// here foir given string return all the possible permutation 
+
+//for example
+
+//1) abc --> o/p--> 3!=6
+
+//2) abb--> o/p--> 3!/2!---> 3
+
+//3)abcba-->o/p-->5!/2!*2!--->120/4--> 30
+
+
+
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -49,4 +61,6 @@ int main()
 
    int res=p(s);
     cout<<res;
+
+    return 0;
 }

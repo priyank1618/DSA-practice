@@ -46,7 +46,7 @@ int help(string s)
     //check for autobio
     for(int i=0;i<n;i++) if(arr[i] != (s[i]-'0')) return 0;
 
-    //not return dis val
+    //now return dis val
     for(int i=0;i<10;i++)
     {
         if(arr[i]>0) cnt++;

@@ -14,7 +14,7 @@ sum opf primes== 2+5=7-->output
 using namespace std;
 
 
-int main()\
+int main()
 {
     int n;cin>>n;
 

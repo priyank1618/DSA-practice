@@ -1,7 +1,6 @@
 /*
-Input Format: N = 6
+Input Format: N = 5
 Result:
-1 2 3 4 5 6
 1 2 3 4 5
 1 2 3 4
 1 2 3

@@ -2,7 +2,7 @@
 1
 2 2
 3 3 3
-4 4 4 4
+4 4 4 4          jequi loop ---------> same in i ---> print the i+1
 5 5 5 5 5
 */
 

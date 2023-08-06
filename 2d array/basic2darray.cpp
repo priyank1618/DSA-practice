@@ -42,8 +42,6 @@ int main(){
         
     }
 
-
-
     // the output loops will be same in both types of the input
 
     // output of the array of col wise input
@@ -60,3 +58,6 @@ int main(){
     
     
 }
+
+// input
+//1 2 3 4 5 6 7 8 9 10 11 12

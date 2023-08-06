@@ -9,7 +9,7 @@ int getsum(int arr[3][4], int row, int col)
         {
             sum += arr[row][col];
         }
-            cout << sum << endl;
+            cout << sum << "  ";
     }
     return 0;
 }

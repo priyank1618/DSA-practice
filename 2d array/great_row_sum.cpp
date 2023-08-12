@@ -14,7 +14,6 @@ int largestrowsum(int arr[3][4], int row, int col)
             if(sum>maxi){
                 maxi=sum;
                 rowindex=row;
-
             }
     }
     cout << "the maximum sum is  " << maxi << endl;

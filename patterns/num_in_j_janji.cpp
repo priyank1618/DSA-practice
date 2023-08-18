@@ -23,7 +23,7 @@ int main()
     {
         for(int j=n;j>i;j--)
         {
-           cout << j-i+1<< " ";
+           cout << n-j+1 << " ";
         }
         cout << endl;
     }

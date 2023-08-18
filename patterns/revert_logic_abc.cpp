@@ -2,10 +2,10 @@
 Input Format: N = 5
 Result:   
 E 
-D E F
-C D E F
-B C D E F
-A B C D E F
+D E 
+C D E 
+B C D E 
+A B C D E 
 
 */
 

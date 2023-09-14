@@ -54,7 +54,7 @@ void poot(Node *root)
    cout << root->data << " ";
 }
 
-// iterative way
+// iterative way using two stacks
 void itpoot(Node *root)
 {
    stack<Node *> st1, st2;
@@ -85,19 +85,68 @@ void itpoot(Node *root)
    }
 }
 
+// iterative way using single stack-LRN
+// t.c-->o(2n) and s.c-->o(n)
+void func(Node *root)
+{
+   stack<Node *> st;
+   Node *curr = root;
+   Node *temp;
+
+   while (curr != NULL and !st.empty())
+   {
+      if (curr != NULL)
+      {
+         st.push(curr);
+         curr = curr->left;
+      }
+
+      else
+
+         // our first left--left--left is null then go first right
+         temp = st.top()->right;
+
+      // now check that right is null or not
+
+      // if it is null then time to print it
+      if (temp == NULL)
+      {
+         temp = st.top();
+         st.pop();
+         cout << temp->data << " ";
+
+         while (!st.empty() and temp == st.top()->right)
+         {
+            temp = st.top();
+            st.pop();
+            cout << temp->data << " ";
+         }
+      }
+
+      // if not null then go another left left left
+      curr = temp;
+   }
+}
+
 // main function
 int main()
 {
    Node *root = NULL;
    root = buildtree(root);
-   cout << "postorder traversal is   ";
+   cout << "postorder traversal using recursion     ";
    poot(root);
+
    cout << endl;
-   cout << endl;
-   cout << "postorder traversal is   ";
+
+   
+   cout << "postorder traversal using double stack    ";
    itpoot(root);
    cout << endl;
+   
+   cout << "postorder traversal using single stack    ";
+   itpoot(root);
    cout << endl;
+   
 }
 
 // i/p------------------1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
